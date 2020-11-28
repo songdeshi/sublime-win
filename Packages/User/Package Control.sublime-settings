@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"ChineseLocalizations",
+		"Emmet",
+		"Git",
+		"JavaScript Completions",
+		"MySQL Snippets",
+		"Nodejs",
+		"Package Control",
+		"PackageResourceViewer",
+		"PHP MySQLi connection",
+		"SublimeLinter",
+		"SublimeLinter-php"
+	]
+}

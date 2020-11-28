@@ -1,0 +1,228 @@
+[
+    // This is a sample keymap for all available Emmet actions like
+    // Increment/Decrement number, Balance, Select Item etc.
+    // Copy and uncomment actions you want to use into your keybindings file on the right.
+    // Read more about Sublime Text key binding: https://www.sublimetext.com/docs/3/key_bindings.html
+
+    // Expand abbreviation
+    // {
+    //     "keys": ["ctrl+e"],
+    //     "command": "emmet_expand_abbreviation"
+    // },
+
+    // Enter abbreviation mode: explicitly enter abbreviation anywhere
+    // with interactive preview
+    // {
+    //     "keys": ["ctrl+."],
+    //     "command": "emmet_enter_abbreviation"
+    // },
+
+    // Wrap with Abbreviation
+    // {
+    //     "keys": ["shift+ctrl+g"],
+    //     "command": "emmet_wrap_with_abbreviation",
+    //     "context": [{"key": "setting.is_widget",  "operand": false }]
+    // },
+
+    // Balance Outward
+    // {
+    //     "keys": ["ctrl+,"],
+    //     "command": "emmet_balance",
+    //     "args": { "direction": "outward" }
+    // },
+
+    // Balance Inward
+    // {
+    //     "keys": ["ctrl+shift+0"],
+    //     "command": "emmet_balance",
+    //     "args": { "direction": "inward" }
+    // },
+
+    // Go to Matching Tag/Tag Pair
+    // {
+    //     "keys": ["ctrl+alt+j"],
+    //     "command": "emmet_go_to_tag_pair"
+    // },
+
+    // Remove Tag
+    // {
+    //     "keys": ["shift+ctrl+;"],
+    //     "command": "emmet_remove_tag"
+    // },
+
+    // Split/Join Tag
+    // {
+    //     "keys": ["shift+ctrl+`"],
+    //     "command": "emmet_split_join_tag"
+    // },
+
+    // Go to Next Edit Point
+    // {
+    //     "keys": ["ctrl+alt+right"],
+    //     "command": "emmet_go_to_edit_point"
+    // },
+
+    // Go to Previous Edit Point
+    // {
+    //     "keys": ["ctrl+alt+right"],
+    //     "command": "emmet_go_to_edit_point",
+    //     "args": { "previous": true }
+    // },
+
+    // Select Next Item
+    // {
+    //     "keys": ["shift+ctrl+."],
+    //     "command": "emmet_select_item"
+    // },
+
+    // Select Previous Item
+    // {
+    //     "keys": ["shift+ctrl+,"],
+    //     "command": "emmet_select_item",
+    //     "args": { "previous": true }
+    // },
+
+    // Evaluate Math Expression
+    // {
+    //     "keys": ["shift+ctrl+y"],
+    //     "command": "emmet_evaluate_math"
+    // },
+
+    // Increment/Decrement Number
+    // {
+    //     "keys": ["ctrl+up"],
+    //     "command": "emmet_increment_number",
+    //     "args": { "delta": 1 }
+    // },
+    // {
+    //     "keys": ["ctrl+down"],
+    //     "command": "emmet_increment_number",
+    //     "args": { "delta": -1 }
+    // },
+    // {
+    //     "keys": ["alt+up"],
+    //     "command": "emmet_increment_number",
+    //     "args": { "delta": 0.1 }
+    // },
+    // {
+    //     "keys": ["alt+down"],
+    //     "command": "emmet_increment_number",
+    //     "args": { "delta": -0.1 }
+    // },
+    // {
+    //     "keys": ["shift+alt+up"],
+    //     "command": "emmet_increment_number",
+    //     "args": { "delta": 10 }
+    // },
+    // {
+    //     "keys": ["shift+alt+down"],
+    //     "command": "emmet_increment_number",
+    //     "args": { "delta": -10 }
+    // },
+
+    // Update Image Size
+    // {
+    //     "keys": ["ctrl+u"],
+    //     "command": "emmet_update_image_size"
+    // },
+
+    // Convert data:URL
+    // {
+    //     "keys": ["ctrl+'"],
+    //     "command": "emmet_convert_data_url"
+    // },
+
+    // Rename Tag
+    // {
+    //     "keys": ["shift+ctrl+'"],
+    //     "command": "emmet_rename_tag"
+    // },
+    
+    { "keys": ["ctrl+q"], "command": "alignment" },
+
+    {
+        "keys": ["tab"],
+        "command": "emmet_expand_abbreviation",
+        "args": { "tab": true },
+        "context": [
+            { "key": "emmet_abbreviation" },
+            { "key": "emmet_tab_expand" }
+        ]
+    },
+    {
+        "keys": ["enter"],
+        "command": "emmet_expand_abbreviation",
+        "context": [
+            { "key": "has_emmet_forced_abbreviation_mark" },
+            { "key": "emmet_abbreviation" }
+        ]
+    },
+    {
+        "keys": ["shift+tab"],
+        "command": "next_field",
+        "context": [
+            { "key": "has_next_field" },
+            { "key": "emmet_abbreviation" },
+            { "key": "emmet_tab_expand" }
+        ]
+    },
+    {
+        "keys": ["escape"],
+        "command": "emmet_clear_abbreviation_marker",
+        "context": [
+            { "key": "has_emmet_abbreviation_mark" },
+            { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+        ]
+    },
+    {
+        "keys": ["escape"],
+        "command": "emmet_hide_tag_preview",
+        "context": [
+            { "key": "emmet_tag_preview" }
+        ]
+    },
+    {
+        "keys": [
+            "#"
+        ],
+        "args": {
+            "attribute": "id"
+        },
+        "command": "emmet_insert_attribute",
+        "context": [
+            {
+                "operand": "text.html meta.tag -string -punctuation.definition.tag.begin.html -meta.scope.between-tag-pair.html -source -meta.tag.template.value.twig",
+                "operator": "equal",
+                "match_all": true,
+                "key": "selector"
+            },
+            {
+                "operator": "equal",
+                "operand": true,
+                "key": "emmet_auto_id_class"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "."
+        ],
+        "args": {
+            "attribute": "class"
+        },
+        "command": "emmet_insert_attribute",
+        "context": [
+            {
+                "operand": "text.html meta.tag -string -punctuation.definition.tag.begin.html -meta.scope.between-tag-pair.html -source -meta.tag.template.value.twig",
+                "operator": "equal",
+                "match_all": true,
+                "key": "selector"
+            },
+            {
+                "operator": "equal",
+                "operand": true,
+                "key": "emmet_auto_id_class"
+            }
+        ]
+    }
+]
